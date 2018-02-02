@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+</head>
+
+<body id="corpo">
+    <div id="divPesquisa">
+        <fieldset>
+            <legend>Pesquisa de skins</legend>
+            <label for="txtValorPesq">Valor da Skin</label>
+            <input type="text" id="txtValorPesq">
+            </br>
+            <input type="button" id="btnBuscar" value="Buscar" onclick="buscar()">
+            <input type="button" id="btnNovo" value="Novo" onclick="adicionarSkin()">
+        </fieldset>
+    </div>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <div id="divGrid">
+
+        <table id="tbGrid" class="table-fill">
+            <thead>
+                <tr>
+                    <th>Nome da Skin</th>
+                    <th>Valor</th>
+                    <th>Estado</th>
+                    <th>Imagem</th>
+                    <th>Cadastro</th>
+                    <th>Edição</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div id="divErro"style="display:none">
+            <p>Nenhum registro foi encontrado</p>
+        </div>
+    </div>
+
+    <div id="divFormulario">
+        <fieldset>
+            <legend>Inventário de Skins</legend>
+            <!-- <label for="txtIdSteam">ID Steam</label>
+            <input type="text" id="txtIdSteam"> -->
+            <label for="txtNomeSkin">Nome da Skin</label>
+            <input type="text" id="txtNomeSkin">
+            <label for="txtValor">Valor da Skin</label>
+            <input type="text" id="txtValor">
+            <label for="cmbEstado">Estado da Skin</label>
+            <select id="cmbEstado">
+                <option value="">Selecione...</option>
+                <option value="fn">Factory New</option>
+                <option value="mw">Minimal Wear</option>
+                <option value="ft">Field Tested</option>
+                <option value="ww">Well Worn</option>
+                <option value="bs">Battle Scarred</option>
+            </select>
+            <label for="imgSkin">Imagem da Skin</label>
+            <input type="file" class="classhere" id="imgSkin">
+            <img id="imgPreview">
+            </br>
+            <div id="divBotoes">
+                <input type="button" id="btnCadastrar" value="Cadastrar">
+                <!-- <button type="reset" value="Reset">Reset</button> -->
+                <input type="button" id="btnCancelar" value="Cancelar" onclick="cancelarUpd()">
+            </div>
+        </fieldset>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
